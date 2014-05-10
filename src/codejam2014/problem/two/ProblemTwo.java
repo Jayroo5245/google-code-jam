@@ -1,10 +1,10 @@
-package codejam2014.practice;
+package codejam2014.problem.two;
 
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-public class PracticeTemplate {
+public class ProblemTwo {
 	Scanner mScanner = new Scanner(getClass().getResourceAsStream(IN));
 	static final String FILENAME = "A-large";
 	static final String IN = FILENAME + ".in";
@@ -43,7 +43,7 @@ public class PracticeTemplate {
 	}
 
 	public static void main(String args[]) throws Exception {
-		new PracticeTemplate().run();
+		new ProblemTwo().run();
 	}
 	private float[][] fillMatrix() {
 		float intMatrix[][] = new float[LENGTH][WIDTH];
