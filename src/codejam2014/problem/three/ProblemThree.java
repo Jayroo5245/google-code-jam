@@ -11,14 +11,15 @@ public class ProblemThree {
 	static final String OUT = FILENAME + ".out";
 	PrintStream out = System.out;
 	
-	static final int LENGTH = 3;
+	static final int LENGTH = 2;
 	static final int WIDTH = 3;
 
-	private void solve(float[][] matrix) {
+	private void solve(int[] intArray, int x) {
 		System.out.println("Solving: ");
-		int ans = 0;
-		out.println(ans);
-		System.out.println("answer: " + ans);
+		int N, K;
+		N = intArray[0];
+		K = intArray[1];
+		System.out.println(getTestCaseStringHelper(x));
 	}
 	
 	private String getTestCaseStringHelper(int testCase){
@@ -35,8 +36,8 @@ public class ProblemThree {
 			return;
 		}
 		for (int x = 0; x < numTestCases; x++) {
-			float floatMatrix[][] = fillMatrix();
-			solve(floatMatrix);
+			int intArray[] = fillMatrix();
+			solve(intArray[]);
 		}
 		mScanner.close();
 		out.close();
@@ -45,12 +46,10 @@ public class ProblemThree {
 	public static void main(String args[]) throws Exception {
 		new ProblemThree().run();
 	}
-	private float[][] fillMatrix() {
-		float intMatrix[][] = new float[LENGTH][WIDTH];
+	private int[] fillMatrix() {
+		int intMatrix[] = new int[LENGTH];
 		for (int row = 0; row < intMatrix.length; row++) {
-			for (int col = 0; col < intMatrix[row].length; col++) {
-				intMatrix[row][col] = mScanner.nextFloat();
-			}
+				intMatrix[row] = mScanner.nextInt();
 		}
 		return intMatrix;
 	}
